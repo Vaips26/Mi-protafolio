@@ -149,7 +149,7 @@ export default function App() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Bootloader simulation
+  // Intro Loader simulation
   useEffect(() => {
     const loaderSteps = [
       { t: 'Iniciando conexión segura con agentes locales...', d: 300 },
@@ -212,7 +212,7 @@ export default function App() {
       id: 'agente-ia-archivos-local',
       title: 'Local Filesystem AI Agent',
       category: 'agents',
-      description: 'Agente autónomo que procesa comandos en lenguaje natural para realizar acciones estructuradas de lectura, escritura y ordenamiento de archivos locales mediante Function Calling y Ollama de manera segura.',
+      description: 'Agente conversacional autónomo desarrollado en Python. Permite interactuar directamente con el sistema de archivos del servidor mediante llamadas a funciones estructuradas (Function Calling) utilizando modelos de lenguaje locales ejecutados con Ollama.',
       tags: ['Ollama', 'Python', 'Qwen2.5', 'OpenAI SDK', 'Function Calling'],
       icon: <Terminal className="w-6 h-6 text-emerald-400" />,
       github: 'https://github.com/Vaips26/agente-ia-archivos-local',
@@ -221,7 +221,7 @@ export default function App() {
       id: 'agente-investigacion',
       title: 'AI Research Agent',
       category: 'agents',
-      description: 'Agente de IA optimizado para la recopilación, filtrado y síntesis automática de información técnica compleja a partir de fuentes web. Genera informes listos para consumo técnico.',
+      description: 'Agente autónomo enfocado en la recolección, síntesis y generación estructurada de informes de investigación. Utiliza técnicas avanzadas de búsqueda semántica y procesamiento de lenguaje para consolidar datos web complejos.',
       tags: ['Python', 'LangChain', 'OpenAI API', 'Semantic Search'],
       icon: <Bot className="w-6 h-6 text-purple-400" />,
       github: 'https://github.com/Vaips26/agente-investigacion',
@@ -230,8 +230,8 @@ export default function App() {
       id: 'Facturas_-Automatizadas',
       title: 'Automated Invoices System',
       category: 'automation',
-      description: 'Pipeline completo de automatización encargado del análisis, clasificación y extracción de metadatos de comprobantes fiscales y facturas, integrando su almacenamiento directo en PostgreSQL.',
-      tags: ['Python', 'Automation', 'Document AI', 'Data Extraction', 'PostgreSQL'],
+      description: 'Sistema inteligente para la extracción y procesamiento automatizado de información contable a partir de facturas digitales. Elimina el factor de captura manual mediante el análisis semántico y almacenamiento en bases de datos PostgreSQL.',
+      tags: ['Python', 'Document AI', 'Data Pipelines', 'PostgreSQL'],
       icon: <Workflow className="w-6 h-6 text-emerald-400" />,
       github: 'https://github.com/Vaips26/Facturas_-Automatizadas',
     },
@@ -239,7 +239,7 @@ export default function App() {
       id: 'task-manager-fullstack',
       title: 'Fullstack Task Manager',
       category: 'fullstack',
-      description: 'Gestor integral de tareas y administración de proyectos. Implementa un backend robusto basado en API REST, base de datos relacional y un dashboard intuitivo totalmente responsive.',
+      description: 'Plataforma completa de administración de tareas y desarrollo de proyectos. Implementa una arquitectura cliente-servidor robusta con control de estados, endpoints optimizados y diseño fluido adaptado a múltiples dispositivos.',
       tags: ['React', 'Node.js', 'Express', 'SQL', 'REST API'],
       icon: <Layers className="w-6 h-6 text-cyan-400" />,
       github: 'https://github.com/Vaips26/task-manager-fullstack',
@@ -282,7 +282,7 @@ export default function App() {
     { name: 'Netlify', type: 'Hosting/Front', icon: <Globe className="w-4 h-4 text-cyan-300" /> },
     { name: 'npm', type: 'Manejador Paquetes', icon: <Wrench className="w-4 h-4 text-red-400" /> },
     { name: 'Kimi K3', type: 'Ecosistema IA', icon: <Sparkles className="w-4 h-4 text-purple-400" />, highlight: true },
-    { name: 'Local Agents', type: 'Desarrollos Propios', icon: <Bot className="w-4 h-4 text-emerald-400" />, highlight: true }
+    { name: 'Claude Code', type: 'AI Assistant', icon: <Bot className="w-4 h-4 text-emerald-400" />, highlight: true }
   ];
 
   if (isLoading) {
@@ -345,14 +345,25 @@ export default function App() {
             <a href="#tech-stack" className="hover:text-purple-400 transition-colors">Tecnologías</a>
             <a href="#projects" className="hover:text-purple-400 transition-colors">Proyectos</a>
             
-            <a 
-              href="#" 
-              onClick={(e) => { e.preventDefault(); alert('Descargando Curriculum Vitae...'); }}
-              className="px-3.5 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:text-white hover:bg-slate-750 transition-all text-xs flex items-center space-x-1.5"
-            >
-              <Download className="w-3.5 h-3.5 text-purple-400" />
-              <span>Descargar CV</span>
-            </a>
+            {/* Dual Language CV Download Links */}
+            <div className="flex items-center space-x-2">
+              <a 
+                href="/CV_Angel_Viveros_ES.pdf" 
+                download="CV_Angel_Viveros_ES.pdf"
+                className="px-2.5 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:text-white hover:bg-slate-750 transition-all text-xs flex items-center space-x-1"
+              >
+                <Download className="w-3 h-3 text-purple-400" />
+                <span>CV (ES)</span>
+              </a>
+              <a 
+                href="/CV_Angel_Viveros_EN.pdf" 
+                download="CV_Angel_Viveros_EN.pdf"
+                className="px-2.5 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:text-white hover:bg-slate-750 transition-all text-xs flex items-center space-x-1"
+              >
+                <Download className="w-3 h-3 text-purple-400" />
+                <span>CV (EN)</span>
+              </a>
+            </div>
 
             <a href="#contact" className="px-4 py-2 rounded-lg bg-purple-500/10 border border-purple-500/30 text-purple-400 hover:bg-purple-500/20 transition-all">
               Contacto
@@ -401,13 +412,25 @@ export default function App() {
                 <span>GitHub Profile</span>
               </a>
 
-              <button 
-                onClick={() => alert('Descargando Curriculum Vitae...')}
-                className="px-6 py-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-purple-500 hover:bg-slate-850 transition-all flex items-center space-x-2 text-sm"
-              >
-                <Download className="w-4 h-4 text-purple-400" />
-                <span>Descargar CV</span>
-              </button>
+              {/* Dual Language CV Buttons in Hero */}
+              <div className="flex items-center gap-2">
+                <a 
+                  href="/CV_Angel_Viveros_ES.pdf" 
+                  download="CV_Angel_Viveros_ES.pdf"
+                  className="px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-purple-500 hover:bg-slate-850 transition-all flex items-center space-x-2 text-xs"
+                >
+                  <Download className="w-3.5 h-3.5 text-purple-400" />
+                  <span>CV (ES)</span>
+                </a>
+                <a 
+                  href="/CV_Angel_Viveros_EN.pdf" 
+                  download="CV_Angel_Viveros_EN.pdf"
+                  className="px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-purple-500 hover:bg-slate-850 transition-all flex items-center space-x-2 text-xs"
+                >
+                  <Download className="w-3.5 h-3.5 text-purple-400" />
+                  <span>CV (EN)</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -699,7 +722,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Projects Showcase - Real GitHub Repositories (Vaips26) */}
+      {/* Projects Showcase - Redesigned to present real GitHub repositories */}
       <section id="projects" className="max-w-6xl mx-auto px-6 py-24 border-t border-slate-900 relative z-10">
         <div className="space-y-12">
           
@@ -832,7 +855,7 @@ export default function App() {
       <footer className="border-t border-slate-900 py-8 bg-darkBg/95 relative z-10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
           <div>© {new Date().getFullYear()} Ángel Viveros. Todos los derechos reservados.</div>
-          <div>Diseñado y programado para integraciones de IA y automatización de procesos.</div>
+          <div>Diseñado y programado para integraciones autónomas de IA y automatización de procesos.</div>
         </div>
       </footer>
 
