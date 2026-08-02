@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Ángel Alejandro Viveros Aguilar</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset & Base Styles matching Damian's CV */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      background-color: #ffffff;
+      line-height: 1.5;
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    /* Typography */
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      color: #0f172a;
+      margin-bottom: 6px;
+      letter-spacing: -0.02em;
+    }
+    .contact-info {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      text-align: center;
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+    .contact-info a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    
+    .summary {
+      font-size: 13.5px;
+      color: #334155;
+      text-align: justify;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 20px;
+    }
+    
+    h2 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1.5px solid #0f172a;
+      padding-bottom: 4px;
+      margin-bottom: 14px;
+    }
+    
+    /* Experience Section */
+    .experience-item {
+      margin-bottom: 20px;
+    }
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .job-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .company {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #475569;
+    }
+    .location-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #64748b;
+      text-align: right;
+    }
+    
+    ul {
+      margin-left: 18px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+    }
+    li {
+      font-size: 13px;
+      color: #334155;
+      margin-bottom: 4px;
+      text-align: justify;
+    }
+    
+    /* Skills Grid */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    .skills-row {
+      display: flex;
+      padding: 6px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .skills-category {
+      width: 180px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #475569;
+    }
+    .skills-list {
+      font-size: 13px;
+      color: #334155;
+      flex: 1;
+    }
+    
+    /* Additional Skills */
+    .additional-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .additional-item {
+      font-size: 12.5px;
+      color: #475569;
+      background-color: #f8fafc;
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Print Optimization Rules */
+    @media print {
+      body {
+        padding: 20px;
+        color: #000000;
+        background-color: #ffffff;
+      }
+      h2 {
+        border-bottom-color: #000000;
+      }
+      .contact-info a {
+        color: #000000;
+      }
+      .additional-item {
+        border-color: #cbd5e1;
+        background-color: transparent;
+      }
+      @page {
+        size: letter;
+        margin: 1.5cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <h1>Ángel Alejandro Viveros Aguilar</h1>
+  <div class="contact-info">
+    Yucatán, México • 
+    <a href="https://github.com/Vaips26" target="_blank">GitHub</a> • 
+    angelviverosaguilar@hotmail.com • 
+    9993668391
+  </div>
+
+  <!-- Professional Profile -->
+  <div class="summary">
+    Ingeniero en Robótica Computacional y Desarrollador Full Stack con amplia experiencia en la automatización avanzada 
+    de procesos corporativos e integración de sistemas de Inteligencia Artificial (IA). Especializado en la arquitectura 
+    completa de aplicaciones (cliente-servidor), desarrollo de APIs asíncronas robustas con FastAPI, flujos de trabajo 
+    inteligentes con n8n e implementaciones con bases de datos relacionales como PostgreSQL. Capacidad comprobada para diseñar 
+    agentes autónomos locales con razonamiento estructurado (Function Calling) y pasarelas de mensajería empresarial.
+  </div>
+
+  <!-- Work Experience -->
+  <h2>Experiencia Profesional</h2>
+  
+  <div class="experience-item">
+    <div class="experience-header">
+      <div>
+        <span class="job-title">Full Stack Developer & AI Automation Specialist</span> <br>
+        <span class="company">Freelance / Consultoría Tecnológica</span>
+      </div>
+      <div class="location-date">
+        Yucatán, México<br>
+        2024 – Actualidad
+      </div>
+    </div>
+    <ul>
+      <li>Desarrollé e integré un agente autónomo local de toma de decisiones utilizando Ollama y Qwen2.5, habilitando la ejecución segura de comandos lógicos en el sistema de archivos del servidor mediante Function Calling.</li>
+      <li>Diseñé e implementé la pasarela de atención automatizada mediante la API en la nube oficial de Meta (WhatsApp Cloud API), utilizando FastAPI y webhooks asíncronos para la gestión de sesiones concurrentes de usuarios.</li>
+      <li>Construí el frontend completo e interactivo del panel de control de flujos de trabajo utilizando React, empaquetadores modernos (Vite) y estilos fluidos responsivos con Tailwind CSS.</li>
+      <li>Configuré flujos lógicos complejos de automatización en n8n, sincronizando bases de datos locales, envío automatizado de alertas de negocio y consumo de APIs de modelos de lenguaje de primer nivel (OpenAI, Anthropic).</li>
+      <li>Optimicé el pipeline de captura contable mediante la extracción de metadatos fiscales de facturas digitales y su posterior almacenamiento estructurado e indexación en PostgreSQL.</li>
+    </ul>
+  </div>
+
+  <!-- Education -->
+  <h2>Educación</h2>
+  <div class="experience-item">
+    <div class="experience-header">
+      <div>
+        <span class="job-title">Ingeniería en Robótica Computacional</span> <br>
+        <span class="company">Universidad Politécnica de Yucatán</span>
+      </div>
+      <div class="location-date">
+        Yucatán, México<br>
+        Agosto 2020 – Diciembre 2024
+      </div>
+    </div>
+    <ul>
+      <li>Programa académico de alta exigencia impartido completamente en idioma inglés, especializado en ciencias de la computación, matemáticas avanzadas y sistemas físicos embebidos.</li>
+    </ul>
+  </div>
+
+  <!-- Certifications -->
+  <h2>Certificaciones</h2>
+  <div class="experience-item" style="margin-bottom: 12px;">
+    <div class="experience-header">
+      <div>
+        <span class="job-title">Google Project Management Certificate</span> – <span class="company">Google Career Certificates</span>
+      </div>
+      <div class="location-date">
+        2024 / 2025
+      </div>
+    </div>
+  </div>
+
+  <!-- Technical Skills -->
+  <h2>Skills Técnicas</h2>
+  <div class="skills-table">
+    <div class="skills-row">
+      <div class="skills-category">Frontend & Web</div>
+      <div class="skills-list">HTML5, CSS3, JavaScript (ES6+), TypeScript, React, Next.js, Tailwind CSS, Responsive Design.</div>
+    </div>
+    <div class="skills-row">
+      <div class="skills-category">Backend & Base de Datos</div>
+      <div class="skills-list">Python, FastAPI, Node.js, Express, REST APIs, PostgreSQL, Uvicorn, Manejo de Webhooks.</div>
+    </div>
+    <div class="skills-row">
+      <div class="skills-category">IA & Automatización</div>
+      <div class="skills-list">n8n, Agentes de IA, Modelos de Lenguaje Locales (Ollama, Qwen), Function Calling, Sistemas RAG.</div>
+    </div>
+    <div class="skills-row">
+      <div class="skills-category">Herramientas & Entorno</div>
+      <div class="skills-list">Git, GitHub, Docker, Linux, Entornos Virtuales (Conda, Venv), Ngrok, Vercel, Netlify.</div>
+    </div>
+  </div>
+
+  <!-- Additional Skills / Idiomas -->
+  <h2>Idiomas & Competencias</h2>
+  <div class="additional-skills" style="margin-top: 8px;">
+    <div class="additional-item">Español: Nativo</div>
+    <div class="additional-item">Inglés: Avanzado (C1 - Bilingüe)</div>
+    <div class="additional-item">Alemán: Básico (A1)</div>
+    <div class="additional-item">Gestión de Proyectos</div>
+    <div class="additional-item">Resolución de Problemas Complejos</div>
+    <div class="additional-item">Pensamiento Analítico</div>
+  </div>
+
+</body>
+</html>
