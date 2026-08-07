@@ -206,14 +206,14 @@ export default function App() {
     }
   }, [terminalDemoStep, isTyping]);
 
-  // Real projects from your GitHub profile (Vaips26)
+  // Real projects linked directly to active GitHub repositories under "Vaips26"
   const projects = [
     {
       id: 'agente-ia-archivos-local',
       title: 'Local Filesystem AI Agent',
       category: 'agents',
-      description: 'Agente conversacional autónomo desarrollado en Python. Permite interactuar directamente con el sistema de archivos del servidor mediante llamadas a funciones estructuradas (Function Calling) utilizando modelos de lenguaje locales ejecutados con Ollama.',
-      tags: ['Ollama', 'Python', 'Qwen2.5', 'OpenAI SDK', 'Function Calling'],
+      description: 'Agente conversacional de inteligencia artificial optimizado para interactuar de forma segura con el sistema de archivos local. Permite consultar, crear, escribir y reubicar archivos usando modelos de lenguaje locales (Ollama) mediante Function Calling.',
+      tags: ['Ollama', 'Python', 'OpenAI SDK', 'Filesystem API', 'Function Calling'],
       icon: <Terminal className="w-6 h-6 text-emerald-400" />,
       github: 'https://github.com/Vaips26/agente-ia-archivos-local',
     },
@@ -221,26 +221,44 @@ export default function App() {
       id: 'agente-investigacion',
       title: 'AI Research Agent',
       category: 'agents',
-      description: 'Agente autónomo enfocado en la recolección, síntesis y generación estructurada de informes de investigación. Utiliza técnicas avanzadas de búsqueda semántica y procesamiento de lenguaje para consolidar datos web complejos.',
-      tags: ['Python', 'LangChain', 'OpenAI API', 'Semantic Search'],
-      icon: <Bot className="w-6 h-6 text-purple-400" />,
+      description: 'Agente inteligente autónomo diseñado para la recopilación, procesamiento y síntesis de información de diversas fuentes web. Automatiza procesos de investigación generando reportes técnicos estructurados en formato markdown de forma independiente.',
+      tags: ['Python', 'LangChain', 'AI Agents', 'Information Retrieval'],
+      icon: <Bot className="w-6 h-6 text-emerald-400" />,
       github: 'https://github.com/Vaips26/agente-investigacion',
+    },
+    {
+      id: 'ai-driven-leads-orchestrator',
+      title: 'AI-Driven Leads Orchestrator',
+      category: 'agents',
+      description: 'Plataforma integrada de punta a punta para la ingesta y automatización de clientes potenciales. Utiliza FastAPI, SQLite y un orquestador que analiza semánticamente mensajes mediante Ollama local.',
+      tags: ['FastAPI', 'React', 'Ollama API', 'PostgreSQL', 'Automation'],
+      icon: <Workflow className="w-6 h-6 text-emerald-400" />,
+      github: 'https://github.com/Vaips26/ai-driven-leads-orchestrator',
+    },
+    {
+      id: 'lead-qualification-agent',
+      title: 'Lead Qualification Agent',
+      category: 'agents',
+      description: 'Agente inteligente autónomo diseñado para calificar prospectos comerciales en lenguaje natural de forma asíncrona. Analiza necesidades, extrae intenciones de compra y calcula scores de viabilidad.',
+      tags: ['Python', 'Ollama', 'AI Agents', 'JSON Parsing', 'Automation'],
+      icon: <Bot className="w-6 h-6 text-emerald-400" />,
+      github: 'https://github.com/Vaips26/lead-qualification-agent',
     },
     {
       id: 'Facturas_-Automatizadas',
       title: 'Automated Invoices System',
       category: 'automation',
-      description: 'Sistema inteligente para la extracción y procesamiento automatizado de información contable a partir de facturas digitales. Elimina el factor de captura manual mediante el análisis semántico y almacenamiento en bases de datos PostgreSQL.',
-      tags: ['Python', 'Document AI', 'Data Pipelines', 'PostgreSQL'],
-      icon: <Workflow className="w-6 h-6 text-emerald-400" />,
+      description: 'Pipeline automatizado diseñado para agilizar la administración contable mediante la extracción de datos clave, validación y almacenamiento estructurado de información fiscal de facturas digitales, optimizando tiempos de procesamiento.',
+      tags: ['Python', 'Automation', 'Document AI', 'Data Extraction', 'PostgreSQL'],
+      icon: <Workflow className="w-6 h-6 text-purple-400" />,
       github: 'https://github.com/Vaips26/Facturas_-Automatizadas',
     },
     {
       id: 'task-manager-fullstack',
       title: 'Fullstack Task Manager',
       category: 'fullstack',
-      description: 'Plataforma completa de administración de tareas y desarrollo de proyectos. Implementa una arquitectura cliente-servidor robusta con control de estados, endpoints optimizados y diseño fluido adaptado a múltiples dispositivos.',
-      tags: ['React', 'Node.js', 'Express', 'SQL', 'REST API'],
+      description: 'Aplicación web integral para la gestión, seguimiento y organización de proyectos. Integra una base de datos segura y un panel de control interactivo para organizar tareas de forma colaborativa y asíncrona.',
+      tags: ['React', 'Node.js', 'Express', 'SQL', 'REST API', 'Tailwind CSS'],
       icon: <Layers className="w-6 h-6 text-cyan-400" />,
       github: 'https://github.com/Vaips26/task-manager-fullstack',
     }
@@ -250,13 +268,14 @@ export default function App() {
     ? projects 
     : projects.filter(p => p.category === activeTab);
 
+  // Structured Tech Stack
   const languages = [
-    { name: 'Python', desc: 'Core de automatización e IA', color: 'border-emerald-500/20 text-emerald-400 hover:border-emerald-500/50' },
-    { name: 'JavaScript', desc: 'Desarrollo web e interactividad', color: 'border-yellow-500/20 text-yellow-400 hover:border-yellow-500/50' },
-    { name: 'TypeScript', desc: 'Estructuración estática robusta', color: 'border-blue-500/20 text-blue-400 hover:border-blue-500/50' },
-    { name: 'SQL', desc: 'Gestión de bases de datos relacionales', color: 'border-cyan-500/20 text-cyan-400 hover:border-cyan-500/50' },
-    { name: 'HTML5', desc: 'Maquetación semántica web', color: 'border-orange-500/20 text-orange-400 hover:border-orange-500/50' },
-    { name: 'CSS3', desc: 'Estilos modernos y adaptables', color: 'border-pink-500/20 text-pink-400 hover:border-pink-500/50' }
+    { name: 'Python', desc: 'Core de automatización e IA', color: 'border-emerald-500/25 text-emerald-400 hover:border-emerald-500/60' },
+    { name: 'JavaScript', desc: 'Desarrollo web e interactividad', color: 'border-yellow-500/25 text-yellow-400 hover:border-yellow-500/60' },
+    { name: 'TypeScript', desc: 'Estructuración estática robusta', color: 'border-blue-500/25 text-blue-400 hover:border-blue-500/60' },
+    { name: 'SQL', desc: 'Gestión de bases de datos relacionales', color: 'border-cyan-500/25 text-cyan-400 hover:border-cyan-500/60' },
+    { name: 'HTML5', desc: 'Maquetación semántica web', color: 'border-orange-500/25 text-orange-400 hover:border-orange-500/50' },
+    { name: 'CSS3', desc: 'Estilos modernos y adaptables', color: 'border-pink-500/25 text-pink-400 hover:border-pink-500/50' }
   ];
 
   const frameworks = {
@@ -282,14 +301,14 @@ export default function App() {
     { name: 'Netlify', type: 'Hosting/Front', icon: <Globe className="w-4 h-4 text-cyan-300" /> },
     { name: 'npm', type: 'Manejador Paquetes', icon: <Wrench className="w-4 h-4 text-red-400" /> },
     { name: 'Kimi K3', type: 'Ecosistema IA', icon: <Sparkles className="w-4 h-4 text-purple-400" />, highlight: true },
-    { name: 'Claude Code', type: 'AI Assistant', icon: <Bot className="w-4 h-4 text-emerald-400" />, highlight: true }
+    { name: 'Local Agents', type: 'Desarrollos Propios', icon: <Bot className="w-4 h-4 text-emerald-400" />, highlight: true }
   ];
 
   if (isLoading) {
     return (
       <div className="fixed inset-0 bg-darkBg flex flex-col items-center justify-center z-50 p-6 font-mono">
         <div className="max-w-md w-full border border-slate-800 rounded-xl bg-panelBg/80 p-6 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-purple-500 via-cyan-500 to-emerald-500"></div>
+          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-purple-500 via-cyan-500 to-purple-500"></div>
           
           <div className="flex items-center space-x-2.5 mb-6 text-slate-400 text-xs border-b border-slate-850 pb-3">
             <Bot className="w-4 h-4 text-purple-400 animate-spin" />
