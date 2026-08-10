@@ -123,34 +123,11 @@
       border-radius: 4px;
       border: 1px solid #e2e8f0;
     }
-    
-    /* Advanced Print Rules to strip Chrome Header & Footer */
     @media print {
-      @page {
-        size: letter;
-        margin-top: 0cm;
-        margin-bottom: 0cm;
-        margin-left: 1.5cm;
-        margin-right: 1.5cm;
-      }
-      body {
-        padding-top: 1.5cm;
-        padding-bottom: 1.5cm;
-        padding-left: 0;
-        padding-right: 0;
-        color: #000000;
-        background-color: #ffffff;
-      }
-      h2 {
-        border-bottom-color: #000000;
-      }
-      .contact-info a {
-        color: #000000;
-      }
-      .additional-item {
-        border-color: #cbd5e1;
-        background-color: transparent;
-      }
+      body { padding: 15px; color: #000; background-color: #fff; }
+      h2 { border-bottom-color: #000; }
+      .contact-info a { color: #000; }
+      @page { size: letter; margin: 1cm; }
     }
   </style>
 </head>
@@ -162,7 +139,7 @@
   </div>
 
   <div class="summary">
-    Software Engineer specializing in <strong>Automation Engineering, Full Stack Development, and AI Integration</strong>. Expert in designing and deploying local autonomous agents with multi-step reasoning, orchestrating asynchronous automated services, and scaling reliable backends. Focused on optimizing enterprise operational workflows, removing manual bottlenecks by combining applied AI with robust backend systems.
+    Highly motivated <strong>Junior AI Engineer</strong> with a solid academic foundation in Robotic Computational Engineering and hands-on experience designing, developing, and deploying production-grade LLM-based applications. Proficient in Python, FastAPI, and standard Git workflows. Skilled in implementing retrieval-augmented generation (RAG) architectures, managing vector databases, and constructing autonomous multi-agent pipelines. Strong communicator with professional English proficiency, comfortable applying forward-deployed engineering (FDE) principles to iterate fast on user requirements.
   </div>
 
   <h2>Professional Experience</h2>
@@ -170,8 +147,8 @@
   <div class="experience-item">
     <div class="experience-header">
       <div>
-        <span class="job-title">Full Stack Developer & AI Automation Specialist</span> <br>
-        <span class="company">Freelance / Technical Software Consulting</span>
+        <span class="job-title">AI Engineer & Software Integrations Specialist</span> <br>
+        <span class="company">Freelance / AI Solutions Development</span>
       </div>
       <div class="location-date">
         Yucatán, Mexico<br>
@@ -179,11 +156,12 @@
       </div>
     </div>
     <ul>
-      <li>Developed the intelligent billing pipeline <strong>Facturas_Automatizadas</strong> in Python, reducing manual entry time by 90% through asynchronous data extraction and PostgreSQL storage.</li>
-      <li>Designed and deployed a high-performance autonomous agent (<strong>agente-ia-archivos-local</strong>) utilizing Python, Ollama, and OpenAI SDK, implementing strict Tool/Function Calling to execute direct filesystem operations based on natural language inputs.</li>
-      <li>Developed and integrated a heuristic web crawling agent (<strong>agente-investigacion</strong>) in Python and LangChain to scrape, parse, and synthesize complex web data autonomously.</li>
-      <li>Built advanced orchestration workflows in n8n, synchronizing relational databases, LLM APIs (OpenAI/Anthropic), and async webhooks, improving operational reliability by 40%.</li>
-      <li>Programmed scalable conversational gateways connected to Meta's WhatsApp Cloud API using FastAPI and Uvicorn to manage asynchronous sessions with relational database persistence.</li>
+      <li>Developed and deployed a production-ready LLM-based local agent (<strong>agente-ia-archivos-local</strong>) utilizing Python, Ollama, and OpenAI SDK, implementing strict Tool/Function Calling to execute direct filesystem operations based on natural language inputs.</li>
+      <li>Architected an intelligent data ingestion and reasoning pipeline (<strong>ai-driven-leads-orchestrator</strong>) utilizing FastAPI (Backend API) and SQLite to handle asynchronous data streams and integrate on-the-fly local LLM classifications.</li>
+      <li>Designed and implemented a semantic web crawling and indexing agent (<strong>agente-investigacion</strong>) using <strong>LangChain</strong>, processing unstructured data into vector representations to enable robust semantic search capabilities.</li>
+      <li>Streamlined document processing workflows by building <strong>Facturas_Automatizadas</strong>, an automated data extraction and validation pipeline in Python that decreased manual capture times by 90% into PostgreSQL databases.</li>
+      <li>Integrated conversational gateways with Meta's <strong>WhatsApp Cloud API</strong> using FastAPI, managing asynchronous webhook lifecycles and preserving conversational state.</li>
+      <li>Maintained clean collaborative workflows using Git, executing systematic code reviews, and utilizing CI/CD practices for stable software deployments.</li>
     </ul>
   </div>
 
@@ -191,43 +169,43 @@
   <div class="experience-item" style="margin-bottom: 8px;">
     <div class="experience-header">
       <div>
-        <span class="job-title">Robotic Computational Engineering</span> – <span class="company">Universidad Politécnica de Yucatán</span>
+        <span class="job-title">Ingeniería en Robótica Computacional</span> – <span class="company">Universidad Politécnica de Yucatán</span>
       </div>
       <div class="location-date">
         April 2022 – April 2026
       </div>
     </div>
-    <div style="font-size: 12px; color: #475569; margin-top: 2px;">Bilingual engineering program (English/Spanish) focused on advanced algorithms, mathematics, and software architectures.</div>
+    <div style="font-size: 12px; color: #475569; margin-top: 2px;">Bilingual engineering program (English/Spanish) focused on advanced computing, data structures, mathematics, and logical modeling.</div>
   </div>
 
   <h2>Technical Skills</h2>
   <div class="skills-table">
     <div class="skills-row">
-      <div class="skills-category">Frontend & Full Stack</div>
-      <div class="skills-list">HTML5, CSS3, JavaScript (ES6+), TypeScript, React, Next.js, Tailwind CSS, Responsive UI.</div>
+      <div class="skills-category">AI & LLM Engineering</div>
+      <div class="skills-list">LLM Integration (Ollama, OpenAI SDK, Hugging Face, Llama, Qwen), LangChain, RAG Systems, Vector Databases, Function/Tool Calling, Prompt Engineering.</div>
     </div>
     <div class="skills-row">
-      <div class="skills-category">Backend & Databases</div>
-      <div class="skills-list">Python, FastAPI, Node.js, Express, REST APIs, PostgreSQL, Uvicorn, Async Webhooks.</div>
+      <div class="skills-category">Software Development</div>
+      <div class="skills-list">Python (Required), JavaScript/Node.js (Desirable), FastAPI, Express, RESTful APIs, Webhooks, PostgreSQL, SQLite, Uvicorn.</div>
     </div>
     <div class="skills-row">
-      <div class="skills-category">Automation & AI</div>
-      <div class="skills-list">n8n, Claude Code, Kimi K3, AI Agents, Local LLMs (Ollama, Qwen), Function/Tool Calling, RAG systems.</div>
+      <div class="skills-category">QA, Testing & Control</div>
+      <div class="skills-list">Pytest, Playwright, API Testing (Postman/Swagger), E2E Testing, Git, GitHub, Version Control Workflows, CI/CD.</div>
     </div>
     <div class="skills-row">
       <div class="skills-category">Tools & Environments</div>
-      <div class="skills-list">Git, GitHub, Docker, Linux, Virtual Envs (Conda, Venv), Ngrok, Vercel, Netlify, npm.</div>
+      <div class="skills-list">Linux, Docker, Conda, Virtual Envs (Venv), Claude Code, Kimi K3, n8n, SDLC/STLC.</div>
     </div>
   </div>
 
   <h2>Languages & Core Competencies</h2>
   <div class="additional-skills">
+    <div class="additional-item">English: Advanced (C1 - Fully Fluent)</div>
     <div class="additional-item">Spanish: Native</div>
-    <div class="additional-item">English: Advanced (C1 - Professional)</div>
     <div class="additional-item">German: Basic (A1)</div>
-    <div class="additional-item">Complex Problem Solving</div>
-    <div class="additional-item">Software Architecture Design</div>
-    <div class="additional-item">Automation Strategy</div>
+    <div class="additional-item">Forward-Deployed Engineering (FDE)</div>
+    <div class="additional-item">Agile Methodologies (Scrum)</div>
+    <div class="additional-item">Google Project Management Certificate</div>
   </div>
 
 </body>
