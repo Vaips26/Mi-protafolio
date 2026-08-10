@@ -123,11 +123,34 @@
       border-radius: 4px;
       border: 1px solid #e2e8f0;
     }
+    
+    /* Advanced Print Rules to strip Chrome Header & Footer */
     @media print {
-      body { padding: 15px; color: #000; background-color: #fff; }
-      h2 { border-bottom-color: #000; }
-      .contact-info a { color: #000; }
-      @page { size: letter; margin: 1cm; }
+      @page {
+        size: letter;
+        margin-top: 0cm;
+        margin-bottom: 0cm;
+        margin-left: 1.5cm;
+        margin-right: 1.5cm;
+      }
+      body {
+        padding-top: 1.5cm;
+        padding-bottom: 1.5cm;
+        padding-left: 0;
+        padding-right: 0;
+        color: #000000;
+        background-color: #ffffff;
+      }
+      h2 {
+        border-bottom-color: #000000;
+      }
+      .contact-info a {
+        color: #000000;
+      }
+      .additional-item {
+        border-color: #cbd5e1;
+        background-color: transparent;
+      }
     }
   </style>
 </head>
@@ -148,7 +171,7 @@
     <div class="experience-header">
       <div>
         <span class="job-title">Full Stack Developer & AI Automation Specialist</span> <br>
-        <span class="company">Freelance / Technical Consulting</span>
+        <span class="company">Freelance / Technical Software Consulting</span>
       </div>
       <div class="location-date">
         Yucatán, Mexico<br>
@@ -156,8 +179,8 @@
       </div>
     </div>
     <ul>
-      <li>Developed the intelligent billing pipeline <strong>Facturas_Automatizadas</strong> in Python, reducing manual entry time by 90% through asynchronous semantic data extraction and PostgreSQL storage.</li>
-      <li>Designed and deployed a high-performance autonomous agent (<strong>agente-ia-archivos-local</strong>) utilizing Ollama, OpenAI SDK, and Qwen2.5, integrating Tool Calling to execute direct filesystem operations via natural language.</li>
+      <li>Developed the intelligent billing pipeline <strong>Facturas_Automatizadas</strong> in Python, reducing manual entry time by 90% through asynchronous data extraction and PostgreSQL storage.</li>
+      <li>Designed and deployed a high-performance autonomous agent (<strong>agente-ia-archivos-local</strong>) utilizing Python, Ollama, and OpenAI SDK, implementing strict Tool/Function Calling to execute direct filesystem operations based on natural language inputs.</li>
       <li>Developed and integrated a heuristic web crawling agent (<strong>agente-investigacion</strong>) in Python and LangChain to scrape, parse, and synthesize complex web data autonomously.</li>
       <li>Built advanced orchestration workflows in n8n, synchronizing relational databases, LLM APIs (OpenAI/Anthropic), and async webhooks, improving operational reliability by 40%.</li>
       <li>Programmed scalable conversational gateways connected to Meta's WhatsApp Cloud API using FastAPI and Uvicorn to manage asynchronous sessions with relational database persistence.</li>
@@ -174,7 +197,7 @@
         April 2022 – April 2026
       </div>
     </div>
-    <div style="font-size: 12px; color: #475569; margin-top: 2px;">Bilingual engineering program (English/Spanish) focused on logical algorithms, mathematics, and software architectures.</div>
+    <div style="font-size: 12px; color: #475569; margin-top: 2px;">Bilingual engineering program (English/Spanish) focused on advanced algorithms, mathematics, and software architectures.</div>
   </div>
 
   <h2>Technical Skills</h2>
